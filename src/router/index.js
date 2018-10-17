@@ -11,6 +11,8 @@ import borther1 from '../components/noFatherAndSon/borther1' //用于兄弟组�
 import borther2 from '../components/noFatherAndSon/borther2'
 import vueindex from '../components/vuexComponents/index'
 import vuesecond from '../components/vuexComponents/second'
+import vuethird from '../components/vuexComponents/third'
+import vuefourth from '../components/vuexComponents/fourth'
 
 Vue.use(VueRouter)
 
@@ -59,6 +61,14 @@ const routes = [{
     path: '/vuesecond',
     component: vuesecond
 
+  },
+  {
+    path: '/vuethird',
+    component: vuethird
+  },
+  {
+    path: '/vuefourth',
+    component: vuefourth
   }
 ]
 

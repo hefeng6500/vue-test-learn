@@ -9,6 +9,9 @@
     <router-link to="/child">child</router-link>
     <router-link to="/borther1">noFatherAndSon/borther1</router-link>
     <router-link to="/vueindex">vueindex</router-link>
+    <router-link to="/vuesecond">vuesecond</router-link>
+    <router-link to="/vuethird">vuethird</router-link>
+    <router-link to="/vuefourth">vuefourth</router-link>
     </div>
     <router-view></router-view>
   </div>
