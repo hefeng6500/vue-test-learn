@@ -2,16 +2,16 @@
   <div id="app">
     <div class="btn-group">
       <router-link to="/index">index</router-link>
-    <router-link to="/first">first</router-link>
-    <router-link to="/second">second</router-link>
-    <router-link to="/three">three</router-link>
-    <router-link to="/parents">parents</router-link>
-    <router-link to="/child">child</router-link>
-    <router-link to="/borther1">noFatherAndSon/borther1</router-link>
-    <router-link to="/vueindex">vueindex</router-link>
-    <router-link to="/vuesecond">vuesecond</router-link>
-    <router-link to="/vuethird">vuethird</router-link>
-    <router-link to="/vuefourth">vuefourth</router-link>
+      <router-link to="/first">first</router-link>
+      <router-link to="/second">second</router-link>
+      <router-link to="/three">three</router-link>
+      <router-link to="/parents">parents</router-link>
+      <router-link to="/child">child</router-link>
+      <router-link to="/borther1">noFatherAndSon/borther1</router-link>
+      <router-link to="/vueindex">vueindex</router-link>
+      <router-link to="/vuesecond">vuesecond</router-link>
+      <router-link to="/vuethird">vuethird</router-link>
+      <router-link to="/vuefourth">vuefourth</router-link>
     </div>
     <router-view></router-view>
   </div>
