@@ -14,66 +14,75 @@ import vuesecond from '../components/vuexComponents/second'
 import vuethird from '../components/vuexComponents/third'
 import vuefourth from '../components/vuexComponents/fourth'
 
+
+import login from '../components/user/login'
+
+
+
 Vue.use(VueRouter)
 
 const routes = [{
-    path: '/',
-    component: index
-  },
-  {
-    path: '/index',
-    component: index
-  },
-  {
-    path: '/first',
-    component: first
-  },
-  {
-    path: '/second',
-    component: second
-  },
-  {
-    path: '/three',
-    component: three
-  },
-  {
-    path: '/parents',
-    component: parents
-  },
-  {
-    path: '/child',
-    component: child
-  },
-  {
-    path: '/borther1',
-    component: borther1
-  },
-  {
-    path: '/borther2',
-    component: borther2
-  },
-  {
-    path: '/vueindex',
-    component: vueindex
+        path: '/',
+        component: login
+    },
+    {
+        path: '/login',
+        component: login
+    },
+    {
+        path: '/index',
+        component: index
+    },
+    {
+        path: '/first',
+        component: first
+    },
+    {
+        path: '/second',
+        component: second
+    },
+    {
+        path: '/three',
+        component: three
+    },
+    {
+        path: '/parents',
+        component: parents
+    },
+    {
+        path: '/child',
+        component: child
+    },
+    {
+        path: '/borther1',
+        component: borther1
+    },
+    {
+        path: '/borther2',
+        component: borther2
+    },
+    {
+        path: '/vueindex',
+        component: vueindex
 
-  },
-  {
-    path: '/vuesecond',
-    component: vuesecond
+    },
+    {
+        path: '/vuesecond',
+        component: vuesecond
 
-  },
-  {
-    path: '/vuethird',
-    component: vuethird
-  },
-  {
-    path: '/vuefourth',
-    component: vuefourth
-  }
+    },
+    {
+        path: '/vuethird',
+        component: vuethird
+    },
+    {
+        path: '/vuefourth',
+        component: vuefourth
+    }
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router

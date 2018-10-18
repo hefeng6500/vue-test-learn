@@ -10,14 +10,14 @@ import store from './vuex/store'
 
 import './css/index.css'
 
-Vue.prototype.$echarts = echarts //引入组件
-Vue.prototype.axios = axios 
-
 Vue.use(ElementUI);
+Vue.prototype.$echarts = echarts //引入组件
+Vue.prototype.axios = axios
+
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')
