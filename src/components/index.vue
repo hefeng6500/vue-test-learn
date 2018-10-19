@@ -24,10 +24,10 @@ export default {
   data() {
     return {
       mudulesList: [
-        {title: '首页',path: '/index'},
-        {title: '父子组件通信',path: '/parents'},
-        {title: '非父子组件通信',path: '/borther1'},
-        {title: 'Vuex',path: '/vueindex'},
+        { title: "首页", path: "/index" },
+        { title: "父子组件通信", path: "/parents" },
+        { title: "非父子组件通信", path: "/borther1" },
+        { title: "Vuex", path: "/vueindex" }
       ]
     };
   },
@@ -50,17 +50,17 @@ export default {
   width: 60px;
   height: 60px;
 }
-.mudulesList{
+.mudulesList {
   margin-left: 30px;
   height: 60px;
   line-height: 60px;
 }
-.mudule{
+.mudule {
   display: inline-block;
   padding: 0 20px;
   /* background: #52a8ff; */
-  a:hover{
-    color: #409EFF;
-  }
+}
+a:hover {
+  color: #409eff;
 }
 </style>

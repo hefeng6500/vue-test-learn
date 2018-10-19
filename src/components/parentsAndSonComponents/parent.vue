@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import myChild from "../child/index";
+import myChild from './child'
 export default {
   data(){
     return{
