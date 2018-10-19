@@ -21,8 +21,6 @@ import vuefourth from '../components/vuexComponents/node4'
 
 import login from '../components/user/login'
 
-
-
 Vue.use(VueRouter)
 
 const routes = [{
