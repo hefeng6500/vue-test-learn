@@ -132,11 +132,42 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix::before {
+  display: block;
+  content: '';
+  clear: both;
+  zoom: 1;
+}
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+  zoom: 1;
+}
 a {
+  color: #333;
+}
+.myBtn {
+  margin-right: 20px;
   display: inline-block;
   padding: 12px 20px;
-  background: #409eff;
   color: #fff;
-  margin-right: 10px;
+  background: #409EFF;
   border-radius: 4px;
+}
+body {
+  background: #f0f3ef;
+}
+.appContainer {
+  width: 1100px;
+  margin: 0 auto;
+}
+.title {
+  text-align: center;
 }

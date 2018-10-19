@@ -1,18 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import index from '../components/index.vue'
-import first from '../components/first.vue'
-import second from '../components/second.vue'
-import three from '../components/three.vue'
-import parents from '../components/parents/index'
-import child from '../components/child/index'
-import borther1 from '../components/noFatherAndSon/borther1' //用于兄弟组件之间的通讯
-import borther2 from '../components/noFatherAndSon/borther2'
-import vueindex from '../components/vuexComponents/index'
-import vuesecond from '../components/vuexComponents/second'
-import vuethird from '../components/vuexComponents/third'
-import vuefourth from '../components/vuexComponents/fourth'
+import index from '../components/index'
+import first from '../components/node1'
+import second from '../components/node2'
+import three from '../components/node3'
+
+import parents from '../components/parentsAndSonComponents/parent' //父子组件通信
+import child from '../components/parentsAndSonComponents/child'
+
+import borther1 from '../components/bortherComponents/borther1' //用于兄弟组件之间的通讯
+import borther2 from '../components/bortherComponents/borther2'
+
+import vueindex from '../components/vuexComponents/index' //vuex通信
+import vuefirst from '../components/vuexComponents/node1'
+import vuesecond from '../components/vuexComponents/node2'
+import vuethird from '../components/vuexComponents/node3'
+import vuefourth from '../components/vuexComponents/node4'
 
 
 import login from '../components/user/login'
@@ -63,8 +67,25 @@ const routes = [{
     },
     {
         path: '/vueindex',
-        component: vueindex
-
+        component: vueindex,
+        children: [{
+                path: '/',
+                component: vuefirst,
+            }, {
+                path: 'vuefirst',
+                component: vuefirst,
+            }, {
+                path: 'vuesecond',
+                component: vuesecond,
+            }, {
+                path: 'vuethird',
+                component: vuethird,
+            },
+            {
+                path: 'vuefourth',
+                component: vuefourth,
+            }
+        ]
     },
     {
         path: '/vuesecond',

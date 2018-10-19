@@ -1,52 +1,57 @@
 <template>
-  <div class="">
-    <h1>states属性的应用</h1>
-    <div>count: {{ countVuex }}</div>
-    <el-button type="primary" @click='increment'>增加</el-button>
+  <div class="vuexIndex">
+    <div class="content clearfix">
+      <h1 class="title">状态管理器Vuex</h1>
+      <div>
+        <router-link class="myBtn" to="/index">回首页</router-link>
+        <a class="myBtn" href="https://vuex.vuejs.org/zh/guide/" target="_blank">Vuex官方文档</a>
+      </div>
+      <ul class="mudulesList left clearfix" v-for="(item,index) in mudulesList" :key="index">
+        <li class="mudule left">
+          <router-link class="myBtn" :to="item.path">{{ item.title}}</router-link>
+        </li>
+      </ul>
+    </div>
+
+    <router-view class="appContainer viewContainer"></router-view>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 
 export default {
   data() {
     return {
-      count: 10
+      count: 10,
+      payload: {},
+
+      mudulesList: [
+        { title: 'vuefirst', path: "/vueindex/vuefirst" },
+        { title: 'vuesecond', path: "/vueindex/vuesecond" },
+        { title: 'vuethird', path: "/vueindex/vuethird" },
+        { title: 'vuefourth', path: "/vueindex/vuefourth" },
+        ]
     };
   },
-  // computed: mapState({
-  //   // countVuex: state => state.count  //这种es6的箭头函数写法很清晰
-  //   // countVuex: "count" //直接使号包括状态属性count
-  //   countVuex(state){//获取局部 'this' 值的时候要使用普通函数
-  //     return state.count + this.count
-  //   }
-  // }),
-
-  //当映射的计算属性的名称与 state 的子节点名称相同时，我们也可以给 mapState 传一个字符串数组。
-  // 映射 this.count 为 store.state.count
-  // computed: mapState([
-  //   'count'
-  // ]),
-
   
-  computed:{//当然也可以这么写，使用this.$store.state获取状态
-    // countVuex(){
-    //   return this.$store.state.count
-    // },
-    ...mapState({//ES6对象扩展操作符,使用对象展开运算符将此对象混入到外部对象中
-      countVuex: state => state.count
-    })
-  },
-  methods: {
-    increment (){
-      // this.count++
-      this.$store.commit('increment')
-    }
-  }
 };
 </script>
 
 <style scoped>
+.vuexIndex{
+  width: 100%;
+}
+
+.viewContainer{
+  margin-top: 40px;
+}
+.content{
+  margin: 20px auto 10px;
+  width: 1100px;
+}
+.mudulesList{
+  margin-top: 20px;
+}
 
 </style>
