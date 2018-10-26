@@ -19,6 +19,12 @@ import vuethird from '../components/vuexComponents/node3'
 import vuefourth from '../components/vuexComponents/node4'
 
 
+import elementui from '../components/elementui/index'
+import fileUpload from '../components/elementui/fileUpload'
+
+
+
+
 import login from '../components/user/login'
 
 Vue.use(VueRouter)
@@ -97,6 +103,20 @@ const routes = [{
     {
         path: '/vuefourth',
         component: vuefourth
+    },
+    {
+        path: '/elementui',
+        component: elementui,
+        children:[
+            {
+                path: '/',
+                component: fileUpload
+            },
+            {
+                path: '/fileUpload',
+                component: fileUpload
+            }
+        ]
     }
 ]
 

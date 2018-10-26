@@ -1,5 +1,5 @@
 <template>
-  <div class="appContainer">
+  <div class="content">
     <h1 class="title">父组件</h1>
     <div>
       <router-link class="myBtn" to="/index">回首页</router-link>

@@ -1,6 +1,6 @@
 <template>
-  <div class="vuexIndex">
-    <div class="content clearfix">
+  <div class="content" >
+    <div class=" clearfix">
       <h1 class="title">状态管理器Vuex</h1>
       <div>
         <router-link class="myBtn" to="/index">回首页</router-link>
@@ -13,7 +13,7 @@
       </ul>
     </div>
 
-    <router-view class="appContainer viewContainer"></router-view>
+    <router-view class="viewContainer"></router-view>
   </div>
 </template>
 
@@ -39,19 +39,11 @@ export default {
 </script>
 
 <style scoped>
-.vuexIndex{
-  width: 100%;
-}
+
 
 .viewContainer{
-  margin-top: 40px;
+  margin-top: 40px ;
 }
-.content{
-  margin: 20px auto 10px;
-  width: 1100px;
-}
-.mudulesList{
-  margin-top: 20px;
-}
+
 
 </style>

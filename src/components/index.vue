@@ -1,5 +1,5 @@
 <template>
-  <div class="index">
+  <div class="index appContainer">
     <header class="header">
       <div class="headerInside clearfix">
         <img class="logo left" src="../assets/logo.png" alt="Vue">
@@ -27,7 +27,8 @@ export default {
         { title: "首页", path: "/index" },
         { title: "父子组件通信", path: "/parents" },
         { title: "非父子组件通信", path: "/borther1" },
-        { title: "Vuex", path: "/vueindex" }
+        { title: "Vuex", path: "/vueindex" },
+        { title: "ElementUI", path: "/elementui" }
       ]
     };
   },

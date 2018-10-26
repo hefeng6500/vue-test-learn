@@ -1,5 +1,5 @@
 <template>
-  <div class="appContainer">
+  <div class="content">
     <h1 class="title">borther1</h1>
     <div class="paragraph">此例子显示非父子组件之间的通信，采用的技术是“中央事件总线”，new Vue，两个组件同时引入，bus.$emit和bus.$on</div>
     <div>
