@@ -6,9 +6,10 @@
       <a class="myBtn" href="http://element-cn.eleme.io/#/zh-CN/component/installation" target="_blank">ElementUI官方文档</a>
       <div class="mudulesList">
         <router-link class="myBtn" to="/fileUpload">文件上传</router-link>
+        <router-link class="myBtn" to="/cascader">级联选择器</router-link>
       </div>
     </div>
-    <router-view></router-view>
+    <router-view class="view"></router-view>
   </div>
 </template>
 <script>

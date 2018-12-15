@@ -21,6 +21,7 @@ import vuefourth from '../components/vuexComponents/node4'
 
 import elementui from '../components/elementui/index'
 import fileUpload from '../components/elementui/fileUpload'
+import cascader from '../components/elementui/cascader'
 
 
 
@@ -30,98 +31,100 @@ import login from '../components/user/login'
 Vue.use(VueRouter)
 
 const routes = [{
+    path: '/',
+    component: login
+  },
+  {
+    path: '/login',
+    component: login
+  },
+  {
+    path: '/index',
+    component: index
+  },
+  {
+    path: '/first',
+    component: first
+  },
+  {
+    path: '/second',
+    component: second
+  },
+  {
+    path: '/three',
+    component: three
+  },
+  {
+    path: '/parents',
+    component: parents
+  },
+  {
+    path: '/child',
+    component: child
+  },
+  {
+    path: '/borther1',
+    component: borther1
+  },
+  {
+    path: '/borther2',
+    component: borther2
+  },
+  {
+    path: '/vueindex',
+    component: vueindex,
+    children: [{
         path: '/',
-        component: login
-    },
-    {
-        path: '/login',
-        component: login
-    },
-    {
-        path: '/index',
-        component: index
-    },
-    {
-        path: '/first',
-        component: first
-    },
-    {
-        path: '/second',
-        component: second
-    },
-    {
-        path: '/three',
-        component: three
-    },
-    {
-        path: '/parents',
-        component: parents
-    },
-    {
-        path: '/child',
-        component: child
-    },
-    {
-        path: '/borther1',
-        component: borther1
-    },
-    {
-        path: '/borther2',
-        component: borther2
-    },
-    {
-        path: '/vueindex',
-        component: vueindex,
-        children: [{
-                path: '/',
-                component: vuefirst,
-            }, {
-                path: 'vuefirst',
-                component: vuefirst,
-            }, {
-                path: 'vuesecond',
-                component: vuesecond,
-            }, {
-                path: 'vuethird',
-                component: vuethird,
-            },
-            {
-                path: 'vuefourth',
-                component: vuefourth,
-            }
-        ]
-    },
-    {
-        path: '/vuesecond',
-        component: vuesecond
+        component: vuefirst,
+      }, {
+        path: 'vuefirst',
+        component: vuefirst,
+      }, {
+        path: 'vuesecond',
+        component: vuesecond,
+      }, {
+        path: 'vuethird',
+        component: vuethird,
+      },
+      {
+        path: 'vuefourth',
+        component: vuefourth,
+      }
+    ]
+  },
+  {
+    path: '/vuesecond',
+    component: vuesecond
 
-    },
-    {
-        path: '/vuethird',
-        component: vuethird
-    },
-    {
-        path: '/vuefourth',
-        component: vuefourth
-    },
-    {
-        path: '/elementui',
-        component: elementui,
-        children:[
-            {
-                path: '/',
-                component: fileUpload
-            },
-            {
-                path: '/fileUpload',
-                component: fileUpload
-            }
-        ]
-    }
+  },
+  {
+    path: '/vuethird',
+    component: vuethird
+  },
+  {
+    path: '/vuefourth',
+    component: vuefourth
+  },
+  {
+    path: '/elementui',
+    component: elementui,
+    children: [{
+        path: '/',
+        component: fileUpload
+      },
+      {
+        path: '/fileUpload',
+        component: fileUpload
+      }, {
+        path: '/cascader',
+        component: cascader
+      }
+    ]
+  }
 ]
 
 const router = new VueRouter({
-    routes
+  routes
 })
 
 export default router

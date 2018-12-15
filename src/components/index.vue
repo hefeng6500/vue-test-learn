@@ -8,13 +8,18 @@
               <router-link :to="item.path">{{ item.title}}</router-link>
             </li>
           </ul>
+          <div>
+            <div>{{ testModdel }}</div>
+          </div>
       </div>
     </header>
+
   </div>
 </template>
 
 <script>
 import "../directive";
+import * as service from "../api/service.js"
 
 export default {
   name: "HelloWorld",
@@ -23,6 +28,8 @@ export default {
   },
   data() {
     return {
+      testModdel: '',
+      rows: 5,
       mudulesList: [
         { title: "首页", path: "/index" },
         { title: "父子组件通信", path: "/parents" },
@@ -31,6 +38,21 @@ export default {
         { title: "ElementUI", path: "/elementui" }
       ]
     };
+  },
+  watch: {
+    rows: (val,oldVal)=>{
+      if(this.rows > 3) {
+        this.rows = 3
+        console.log('this.rows')
+        console.log(this.rows)
+      }
+    }
+  },
+  mounted(){
+    service.testApi().then(res=>{
+      console.log(res)
+      this.testModdel = res
+    })
   },
   methods: {}
 };

@@ -5,7 +5,8 @@ import {
 } from 'element-ui';
 
 let requset = axios.create({
-    baseURL: 'https://easy-mock.com/mock/5bc8391a4645473183fb626d/base', //easy-mock地址
+    // baseURL: 'https://easy-mock.com/mock/5bc8391a4645473183fb626d/base', //easy-mock地址
+    baseURL: '', //easy-mock地址
     timeout: 5000
 });
 
@@ -24,7 +25,6 @@ requset.interceptors.response.use(
     (response) => {
         let res = response.data
         if (response.status === 200) {
-            // console.log(response.data)
             return res;
         } else {
             Message({
@@ -35,7 +35,6 @@ requset.interceptors.response.use(
         }
     },
     (error) => {
-        console.log('err' + error)
         Message({
             message: error.message,
             type: 'error',
